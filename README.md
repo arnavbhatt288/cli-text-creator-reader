@@ -1,4 +1,4 @@
-# Basic CLI text creator and editor
+# Basic CLI text creator and reader
 
 ## What's this?
 This is a cli based app used to create text files and add text on it and read the text files. *IT IS NOT A TEXT EDITOR.*
