@@ -50,6 +50,8 @@ int startEngine(void)
 		printError("Wrong choice!");
 		exit (1);
 	}
+	
+	return 0;
 }
 
 int readEngine(void)
@@ -79,6 +81,8 @@ int readEngine(void)
 		fclose(fptr);
 		exit(0);
 	}
+	
+	return 0;
 }
 
 int writeEngine(void)
