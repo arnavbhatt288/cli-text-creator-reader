@@ -16,44 +16,6 @@ void printError(char errorString[])
 	printf("Error! - %s The program will now exit...\n", errorString);
 }
 
-int startEngine(void)
-{
-	int choice;
-	
-	printf("\e[1;1H\e[2J");
-	
-	printf("+----------------------------+\n");
-	printf("|                            |\n");
-	printf("| Text creator and editor    |\n");
-	printf("|                            |\n");
-	printf("| Copyright 2019 Arnav Bhatt |\n");
-	printf("|                            |\n");
-	printf("+----------------------------+\n");
-
-	printf("Choose the option below -\n");
-	printf("1. Read the text file\n");
-	printf("2. Create a new text file and write something in it\n\n");
-	scanf("%i", &choice);
-	
-	if(choice == 1)
-	{
-		readEngine();
-	}
-	
-	else if(choice == 2)
-	{
-		writeEngine();
-	}
-	
-	else
-	{
-		printError("Wrong choice!");
-		exit (1);
-	}
-	
-	return 0;
-}
-
 int readEngine(void)
 {
 	FILE *fptr;
@@ -90,7 +52,7 @@ int writeEngine(void)
 	FILE *fptr;
 
 	printf("Enter the name of the text file you want.\n");
-	printf("After writing press Ctrl + C to exit the program. -\n");
+	printf("After writing press Ctrl + C to exit the program -\n");
 	scanf("%s", &name);
 	fptr = fopen(name, "w");
 	
@@ -109,6 +71,38 @@ int writeEngine(void)
 
 int main()
 {
-	startEngine();
+	int choice;
+	
+	printf("\e[1;1H\e[2J");
+	
+	printf("+----------------------------+\n");
+	printf("|                            |\n");
+	printf("| Text creator and editor    |\n");
+	printf("|                            |\n");
+	printf("| Copyleft 2019 Arnav Bhatt  |\n");
+	printf("|                            |\n");
+	printf("+----------------------------+\n");
+
+	printf("Choose the option below -\n");
+	printf("1. Read the text file\n");
+	printf("2. Create a new text file and write something in it\n\n");
+	scanf("%i", &choice);
+	
+	if(choice == 1)
+	{
+		readEngine();
+	}
+	
+	else if(choice == 2)
+	{
+		writeEngine();
+	}
+	
+	else
+	{
+		printError("Wrong choice!");
+		exit (1);
+	}
+	
 	return 0;
 }

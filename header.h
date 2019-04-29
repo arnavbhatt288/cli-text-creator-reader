@@ -12,7 +12,6 @@
 void printError(char errorString[]);
 int writeEngine(void);
 int readEngine(void);
-int startEngine(void);
 
 #define MAX_CHAR_LIMIT 1024
 #define MAX_LINE_LIMIT 1024
